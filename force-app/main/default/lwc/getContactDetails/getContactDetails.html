@@ -1,0 +1,10 @@
+<template>
+    <lightning-card title="Contact Details">
+        <lightning-input title="No of Records" label="No of Records" type="integer" onkeyup={setContactCount}></lightning-input>
+        <template for:each={contactDetail} for:item="contact">
+            <li key={contact.Id}>
+                {contact.LastName}
+            </li>
+        </template>
+    </lightning-card>
+</template>
