@@ -1,0 +1,11 @@
+<template>
+    <lightning-input label="No of Records" type="number" title="No Of Records" onkeyup={setCount}></lightning-input>
+    <lightning-card title="Account List">
+        <template for:each={accountList} for:item="account">
+            <li key={account.Id}>
+{account.Name}
+{account.AnnualRevenue}
+            </li>
+        </template>
+    </lightning-card>
+</template>
